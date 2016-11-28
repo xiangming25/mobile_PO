@@ -29,7 +29,8 @@ Q: [什么是CSS Sprites(雪碧图)？](https://zhidao.baidu.com/question/646556
 
 ## 5. 无阻塞
 ```
-- css写在文件开头部分。  
+- css写在文件开头部分用<link />的方式引入。  
+- 尽量不在页面中通过style的方式添加样式。  
 - js的引用写在文件底部。
 ```
 
