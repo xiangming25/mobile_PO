@@ -6,7 +6,7 @@
   CSS雪碧 即CSS Sprites，也有人叫它CSS精灵，是一种CSS图像合并技术，
   该方法是将小图标和背景图像合并到一张图片上，然后利用css的背景定位来显示需要显示的图片部分。
 ```
-[什么是雪碧图？](https://zhidao.baidu.com/question/646556016260409565.html)
+Q: [什么是雪碧图？](https://zhidao.baidu.com/question/646556016260409565.html)
 
 ## 2. 缓存
 ```
