@@ -19,8 +19,10 @@ Q: [什么是CSS Sprites(雪碧图)？](https://zhidao.baidu.com/question/646556
 
 ## 3. 文件压缩
 ```
-  开发生成的js、css文件进过压缩后去掉注释，空格等，减少http请求资源。
+  1. 开发生成的js、css文件进过压缩后去掉注释，空格等，减少http请求资源。
+  2. 启用gZip压缩。
 ```
+Q： [windows如何启用gZip压缩？](http://blog.sina.com.cn/s/blog_67da14f40101sw29.html);
 
 ## 4. 减少DOM节点
 ```
