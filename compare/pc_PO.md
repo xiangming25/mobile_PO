@@ -44,7 +44,12 @@ Q: [什么是CSS Sprites(雪碧图)？](https://zhidao.baidu.com/question/646556
   如果图片需要100*100这样大的，就不要用一张大小为500 * 500的，然后压缩成100 * 100大小的。
 ```
   
-
+## 8. 按需加载
+```
+1. 懒加载。
+2. 滚动加载。
+3. 通过Media Query加载。
+```
 
  
 [参考网站](http://www.jiangweishan.com/article/Mobile-Optimization.html)
