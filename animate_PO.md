@@ -1,0 +1,12 @@
+# 动画优化要点总结
+
+- 执行动画尽量使用CSS3 keyframes和 trainsition
+- 如果需要JS执行动画，使用requestAnimationFrame,或者Velocity,避免使用jQuery动画,setTimeout,setInterval。
+- js动画的优点是，我们能随时控制开始，暂停，停止，而CSS不行。缺点是没办法像css这样优化，因为js动画是在主线程上跑的。
+- 动画尽量使用transform,opacity，尽量避免left/padding/background-position等
+- 尽量避免不必要的动画发生（废话）点击这里
+- 尽可能的为产生动画的元素使用fixed或absolute的position
+- 阴影渐显动画尽量用伪类的opacity来实现。点击这里
+- 使用3D硬件加速提升动画性能时，最好给元素增加一个z-index属性，人为干扰复合层的排序，可以有效减少chrome创建不必要的复合层，提升渲染性能，移动端优化效果尤为明显。(来自前端农民工)
+- 使用Chrome Timeline工具检查
+- 时刻把浏览器处理流程记在心里
