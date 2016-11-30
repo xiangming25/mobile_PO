@@ -42,6 +42,7 @@ nav .navs ul {
   display: block;
   height: 0;
   overflow: hidden;
+  transition: height 0.3s linear;
 }
 nav .navs ul li {
   line-height: 1.0rem;
