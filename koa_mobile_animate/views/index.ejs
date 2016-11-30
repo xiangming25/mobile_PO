@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mobile nav</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/nav.css" />
+</head>
+<body>
+	<header>
+		<nav>
+			<h1>这里是标题栏</h1>
+			<div class="navs">
+				<i class="icon" id="icon"></i>
+				<ul class="sub-ul">
+					<li>
+						<a href="#">栏目1</a>
+						<ul class="third-ul">
+							<li><a href="#">栏目1-1</a></li>
+							<li><a href="#">栏目1-2</a></li>
+							<li><a href="#">栏目1-3</a></li>
+							<li><a href="#">栏目1-4</a></li>
+							<li><a href="#">栏目1-5</a></li>
+							<li><a href="#">栏目1-6</a></li>
+						</ul>
+					</li>
+					<li><a href="#">栏目2</a></li>
+					<li><a href="#">栏目3</a></li>
+					<li><a href="#">栏目4</a></li>
+					<li><a href="#">栏目5</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<script type="text/javascript" src="/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="/javascripts/flexible_css.js,flexible.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#icon').click(function(){
+				console.log($('.sub-ul').css('height'));
+				if(parseInt($('.sub-ul').css('height'))){
+					$('.sub-ul').css('height','0px');
+				}else{
+					$('.sub-ul').css('height','350px');
+				}
+			});
+		})
+	</script>
+</body>
+</html>

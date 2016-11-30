@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  position: relative;
+  display: block;
+}
+nav h1 {
+  display: block;
+  margin: 0;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  padding: 0 70px;
+  border-bottom: 1px solid #000000;
+}
+nav .navs {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  top: 0;
+  text-align: right;
+  font-size: 0;
+  width: 100%;
+}
+nav .navs .icon {
+  display: inline-block;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  width: 1.5rem;
+  background-color: #f00;
+  font-size: 36px;
+}
+nav .navs ul {
+  width: 100%;
+  text-align: left;
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+nav .navs ul li {
+  line-height: 1.0rem;
+  background-color: #00a3e5;
+  font-size: 24px;
+  border-bottom: 1px solid #000;
+  padding-left: 10px;
+}
+nav .navs ul li:last-child {
+  border-bottom: none;
+}
+nav .navs ul li a {
+  font-size: inherit;
+}
+nav .navs .third-ul {
+  display: none;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mobile nav</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/nav.css" />
+</head>
+<body>
+	<header>
+		<nav>
+			<h1>这里是标题栏</h1>
+			<div class="navs">
+				<i class="icon" id="icon"></i>
+				<ul class="sub-ul">
+					<li>
+						<a href="#">栏目1</a>
+						<ul class="third-ul">
+							<li><a href="#">栏目1-1</a></li>
+							<li><a href="#">栏目1-2</a></li>
+							<li><a href="#">栏目1-3</a></li>
+							<li><a href="#">栏目1-4</a></li>
+							<li><a href="#">栏目1-5</a></li>
+							<li><a href="#">栏目1-6</a></li>
+						</ul>
+					</li>
+					<li><a href="#">栏目2</a></li>
+					<li><a href="#">栏目3</a></li>
+					<li><a href="#">栏目4</a></li>
+					<li><a href="#">栏目5</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<script type="text/javascript" src="/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="/javascripts/flexible_css.js,flexible.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+			var subUl = $('.sub-ul'),
+				subUlHeight = 0;
+			$('#icon').click(function(){
+				subUlHeight = parseInt($('.sub-ul').css('height'));
+				if(subUlHeight <= 0){
+					requestAnimationFrame(showSubUl);
+				}else{
+					requestAnimationFrame(hideSubUl);
+				}
+			});
+
+			/**
+			 * 显示二级菜单
+			 * @param  {[type]} timestamp [description]
+			 * @return {[type]}           [description]
+			 */
+			function showSubUl(timestamp){
+				// console.log('timestamp:',timestamp);
+				subUlHeight += 2;
+				subUl.css('height',subUlHeight+'px');
+				if(subUlHeight < 350){
+					requestAnimationFrame(showSubUl);
+				}
+			}
+
+			/**
+			 * 隐藏二级菜单
+			 * @param  {[type]} timestamp [description]
+			 * @return {[type]}           [description]
+			 */
+			function hideSubUl(timestamp){
+				// console.log('hideSubUl:s');
+				subUlHeight -= 2;
+				subUl.css('height',subUlHeight+'px');
+				if(subUlHeight > 0){
+					requestAnimationFrame(hideSubUl);
+				}
+			}
+		})
+	</script>
+</body>
+</html>

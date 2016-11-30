@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>mobile nav</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/nav.css" />
+	<style type="text/css">
+		.box {
+		    width: 400px; padding: 15px;  background-color: #f0f3f9;
+		}
+		.container {
+		    height: 0; position: relative;  overflow: hidden;
+		}
+		.container img {
+		    position: absolute;  bottom: 0;
+		}
+	</style>
+</head>
+<body>
+	<p>想看美女图片？<a href="javascript:" id="button">点击我</a></p>
+	<div id="more" class="container">
+	    <img src="http://image.zhangxinxu.com/image/study/s/s256/mm1.jpg" height="191" />
+	</div>
+	<script type="text/javascript">
+		(function() {
+		    var eleBtn = document.getElementById("button"),
+		        eleMore = document.getElementById("more");
+
+		    var height = 0, display = false, timer;
+
+		    var step = function() {
+		        height = display? (height + 10): (height - 10);
+		        if (height < 0) {
+		            height = 0;
+		        } else if (height > 191) {
+		            height = 191;
+		        }
+		        eleMore.style.height = height + "px";
+		        if (height > 0 && height < 191) {
+		            timer = setTimeout(step, 10);
+		        }
+		    };
+
+		    eleBtn.onclick = function() {
+		        if (timer) clearTimeout(timer)
+		        display = !display;
+		        step();
+		        return false;
+		    };
+		})();
+	</script>
+</body>
+</html>
