@@ -8,7 +8,7 @@
 [优化方法](https://github.com/ming25/mobile_PO/blob/master/%E5%8A%A8%E7%94%BB%E4%BC%98%E5%8C%96.md?_blank)
 
 ## pc性能优化方法  
-[优化方法](https://github.com/ming25/mobile_PO/blob/master/%E5%8A%A8%E7%94%BB%E4%BC%98%E5%8C%96.md?_blank)
+[优化方法](https://github.com/ming25/mobile_PO/blob/master/PC%E4%BC%98%E5%8C%96.md)
  
  
 ## 示例项目使用方法
