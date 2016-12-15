@@ -1,6 +1,9 @@
 
 # PC优化
 
+[前端优化：9 个技巧，提高 Web 性能 【已翻译100%】](https://www.oschina.net/translate/front-end-optimization)
+
+
 ## 1. 减少http 请求（雪碧图， 文件合并）
 ```
   CSS雪碧 即CSS Sprites，也有人叫它CSS精灵，是一种CSS图像合并技术，
